@@ -73,11 +73,11 @@ for (var i = 0; i <= 10; i++) {
 //#7: The next block of code hides three  logical error. Run the code as-is to find the mistakes.
 //The for loop will iterate from 0 to 20, but should stop at 18 then continue
 
-for (var i = 0; i <= 20; i++) {
-  if (i % 2 === 0) {
-    console.log(i + " is even");
+for (var j = 0; i <= 20; i++) {
+  if (j % 2 === 0) {
+    console.log(j + " is even");
   } else {
-    console.log(i + " is odd");
+    console.log(j + " is odd");
   }
 }
 //#8: The next block of code hides one-two  logical error. Run the code as-is to find the mistakes.

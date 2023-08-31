@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Butcherman&family=East+Sea+Dokdo&family=Romanesco&display=swap"
+        rel="stylesheet">
+    <title>Fortune Teller</title>
+    <a href=index.html>Home page</a>
+    <style>
+        #header {
+            background-image: url(https://media.giphy.com/media/dw2yCF4MhcNmSMgpfe/giphy.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        button {
+            font-size: 40px;
+            background-color: transparent;
+            border: 5px solid aqua;
+            color: black;
+            margin-left: 565px;
+            margin-top: 320px;
+            font-family: 'Romanesco', cursive;
+        }
+
+        h2#btn {
+            color: black;
+            font-size: 48px;
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        h1,
+        h2 {
+            color: #eeee;
+            font-family: 'Romanesco', cursive;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="fortune.html">See your Fortune</a>
+        <a href="index.html">🏠</a>
+    </nav>
+    <div id="header">
+        <h1>See your fortune for what 2023 will hold</h1>
+        <h2>It may not be all roses and sunshine <i>Look at your OWN RISK...</i> </h2>
+        <button onclick="tellFortune()">See your Fortune</button>
+
+        <h2 id="btn" input type="button" id="btnSearch" value="Search" onclick="GetValue();" />
+        <p id="message"></p>
+        </h2>
+    </div>
+    <script>
+        function tellFortune() {
+            let myFortune = new Array(
+                "You won't find that bug in your code 🐜",
+                "You're going to get that big tech job 💵",
+                "You fell into an infinite loop ♾",
+                "You will break your code and not have a saved version 💔",
+                "You will be hired by Google 🏆",
+                "You will word for Meta 🏆",
+                "Expand your hand to help others code 👋🏾",
+                "Someone will call you today with good news 🧧",
+                "You will meet people with good connections 🤼",
+                "Be careful on Tuesday, there may be something BIG happening 👀");
+            for (let fortune of myFortune) {
+                let random = myFortune[Math.floor(Math.random() * myFortune.length)];
+
+                document.getElementById("message").innerHTML = random;
+            }
+        }
+    </script>
+</body>
+
+</html>
